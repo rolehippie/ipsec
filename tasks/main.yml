@@ -1,0 +1,52 @@
+# Standards: 1.2
+---
+- name: Install required packages
+  loop:
+    - strongswan
+    - strongswan-tnc-base
+    - strongswan-charon
+    - strongswan-libcharon
+    - strongswan-starter
+    - libstrongswan-extra-plugins
+    - libstrongswan-standard-plugins
+  package:
+    name: "{{ item }}"
+    state: present
+  tags:
+    - ipsec
+
+- name: Write secrets config
+  notify:
+    - Reload strongswan
+  template:
+    src: secrets.j2
+    dest: /etc/ipsec.secrets
+    owner: root
+    group: root
+    mode: u=rw,g=,o=
+  tags:
+    - ipsec
+
+- name: Write ipsec config
+  notify:
+    - Reload strongswan
+  template:
+    src: config.j2
+    dest: /etc/ipsec.conf
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  tags:
+    - ipsec
+
+- name: Start strongswan service
+  systemd:
+    name: strongswan-starter
+    state: started
+    daemon_reload: True
+    masked: False
+    enabled: True
+  tags:
+    - ipsec
+
+...

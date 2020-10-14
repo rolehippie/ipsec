@@ -1,0 +1,31 @@
+config setup
+    charondebug="{{ ipsec_charon_debug }}"
+    uniqueids="{{ 'yes' if ipsec_unique_ids else 'no' }}"
+{% for item in ipsec_sites_general + ipsec_sites_extra %}
+
+conn {{ item.name }}
+    leftid={{ item.left_id | default(item.left) }}
+    left={{ item.left }}
+    leftsubnet={{ item.left_subnet }}
+    leftauth={{ item.left_auth | default('psk') }}
+
+    rightid={{ item.right_id | default(item.right) }}
+    right={{ item.right }}
+    rightsubnet={{ item.right_subnet }}
+    rightauth={{ item.right_auth | default('psk') }}
+
+    ike={{ item.ike | default('chacha20poly1305-sha512-curve25519-prfsha512,aes256gcm16-sha384-prfsha384-ecp384,aes256-sha1-modp1024,aes128-sha1-modp1024,3des-sha1-modp1024!') }}
+    esp={{ item.esp | default('chacha20poly1305-sha512,aes256gcm16-ecp384,aes256-sha256,aes256-sha1,3des-sha1!') }}
+
+    keyingtries={{ item.keyingtries | default('%forever') }}
+    keyexchange={{ item.keyexchange | default('ikev2') }}
+
+    ikelifetime={{ item.ikelifetime | default('1h') }}
+    lifetime={{ item.lifetime | default('8h') }}
+
+    dpddelay={{ item.dpddelay | default('10') }}
+    dpdtimeout={{ item.dpdtimeout | default('120') }}
+    dpdaction={{ item.dpdaction | default('restart') }}
+
+    auto={{ item.auto | default('start') }}
+{% endfor %}
