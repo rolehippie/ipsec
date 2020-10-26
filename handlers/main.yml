@@ -2,7 +2,7 @@
 ---
 - name: Reload strongswan
   systemd:
-    name: strongswan-starter
+    name: "{{ ipsec_service_name }}"
     state: reloaded
     daemon_reload: True
 

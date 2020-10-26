@@ -1,8 +1,14 @@
 # ipsec
 
-[![Build Status](https://cloud.drone.io/api/badges/rolehippie/ipsec/status.svg)](https://cloud.drone.io/rolehippie/ipsec)
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/ipsec) [![Build Status](https://img.shields.io/drone/build/rolehippie/ipsec/master?logo=drone)](https://cloud.drone.io/rolehippie/ipsec) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/ipsec)](https://github.com/rolehippie/ipsec/blob/master/LICENSE) 
 
-Ansible role to configure ipsec
+Ansible role to configure IPsec tunnels. 
+
+## Sponsor 
+
+[![Proact Deutschland GmbH](https://proact.eu/wp-content/uploads/2020/03/proact-logo.png)](https://proact.eu) 
+
+Building and improving this Ansible role have been sponsored by my employer **Proact Deutschland GmbH**.
 
 ## Table of content
 
