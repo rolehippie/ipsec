@@ -1,5 +1,14 @@
 # Standards: 1.2
 ---
+- name: Include OS vars
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version }}.yml"
+    - "{{ ansible_distribution | lower }}.yml"
+    - "{{ ansible_os_family | lower }}.yml"
+  tags:
+    - ipsec
+
 - name: Install required packages
   loop:
     - strongswan
@@ -41,7 +50,7 @@
 
 - name: Start strongswan service
   systemd:
-    name: strongswan-starter
+    name: "{{ ipsec_service_name }}"
     state: started
     daemon_reload: True
     masked: False
