@@ -12,12 +12,12 @@
 - name: Install required packages
   loop:
     - strongswan
-    - strongswan-tnc-base
     - strongswan-charon
     - strongswan-libcharon
     - strongswan-starter
     - libstrongswan-extra-plugins
     - libstrongswan-standard-plugins
+    - libcharon-extra-plugins
   package:
     name: "{{ item }}"
     state: present
