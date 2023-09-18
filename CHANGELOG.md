@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/rolehippie/ipsec/compare/v1.0.0...v1.1.0) (2023-09-18)
+
+
+### Features
+
+* add missing vars for ubuntu 22.04 ([deaaafc](https://github.com/rolehippie/ipsec/commit/deaaafc7106f3c2ec287e6354196e1816785533d))
+* replace strongswan-tnc-base by libcharon-extra-plugins ([d37743a](https://github.com/rolehippie/ipsec/commit/d37743ad4990706e75d02639698623a6851c009a))
+
 ## 1.0.0 (2023-01-05)
 
 
