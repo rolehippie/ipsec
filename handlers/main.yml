@@ -1,7 +1,6 @@
-# Standards: 1.2
 ---
 - name: Reload strongswan
-  systemd:
+  ansible.builtin.systemd:
     name: "{{ ipsec_service_name }}"
     state: reloaded
     daemon_reload: True

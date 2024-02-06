@@ -1,7 +1,6 @@
-# Standards: 1.2
 ---
 - name: Include OS vars
-  include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version }}.yml"
     - "{{ ansible_distribution | lower }}.yml"
@@ -18,7 +17,7 @@
     - libstrongswan-extra-plugins
     - libstrongswan-standard-plugins
     - libcharon-extra-plugins
-  package:
+  ansible.builtin.package:
     name: "{{ item }}"
     state: present
   tags:
@@ -27,7 +26,7 @@
 - name: Write secrets config
   notify:
     - Reload strongswan
-  template:
+  ansible.builtin.template:
     src: secrets.j2
     dest: /etc/ipsec.secrets
     owner: root
@@ -39,7 +38,7 @@
 - name: Write ipsec config
   notify:
     - Reload strongswan
-  template:
+  ansible.builtin.template:
     src: config.j2
     dest: /etc/ipsec.conf
     owner: root
@@ -49,7 +48,7 @@
     - ipsec
 
 - name: Start strongswan service
-  systemd:
+  ansible.builtin.systemd:
     name: "{{ ipsec_service_name }}"
     state: started
     daemon_reload: True
