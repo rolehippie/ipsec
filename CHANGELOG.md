@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/rolehippie/ipsec/compare/v2.0.0...v2.1.0) (2024-11-12)
+
+
+### Features
+
+* add Ubuntu 24 vars file ([ada2cc9](https://github.com/rolehippie/ipsec/commit/ada2cc9695828c79b9dd5d4fe6877d7012590225))
+
 ## [2.0.0](https://github.com/rolehippie/ipsec/compare/v1.1.0...v2.0.0) (2024-02-12)
 
 
