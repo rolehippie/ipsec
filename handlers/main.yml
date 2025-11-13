@@ -3,6 +3,6 @@
   ansible.builtin.systemd:
     name: "{{ ipsec_service_name }}"
     state: reloaded
-    daemon_reload: True
+    daemon_reload: true
 
 ...

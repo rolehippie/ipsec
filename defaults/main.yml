@@ -3,7 +3,7 @@
 ipsec_charon_debug: ike 1, knl 1, cfg 0
 
 # @var ipsec_unique_ids:description: Allow or disallow multiple ids
-ipsec_unique_ids: False
+ipsec_unique_ids: false
 
 # @var ipsec_sites_general:description: List of general sites
 ipsec_sites_general: []
