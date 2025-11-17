@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/rolehippie/ipsec/compare/v2.1.0...v2.2.0) (2025-11-17)
+
+
+### Features
+
+* apply new repo structure and update linting ([3169d16](https://github.com/rolehippie/ipsec/commit/3169d1657dde6b3984e3712e1144639feb82463c))
+
 ## [2.1.0](https://github.com/rolehippie/ipsec/compare/v2.0.0...v2.1.0) (2024-11-12)
 
 
