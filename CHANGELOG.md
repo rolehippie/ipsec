@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/rolehippie/ipsec/compare/v2.3.0...v2.4.0) (2026-08-10)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-doctor to v8.4.0 ([#48](https://github.com/rolehippie/ipsec/issues/48)) ([c80b138](https://github.com/rolehippie/ipsec/commit/c80b1386398f32882a86e84173a5dc1324e59ad2))
+* **patch:** update dependency python to v3.14.7 ([#46](https://github.com/rolehippie/ipsec/issues/46)) ([bb50938](https://github.com/rolehippie/ipsec/commit/bb509388923ed49b5ec55e74d23163e0a38b40c7))
+
 ## [2.3.0](https://github.com/rolehippie/ipsec/compare/v2.2.0...v2.3.0) (2026-07-27)
 
 ## [2.2.0](https://github.com/rolehippie/ipsec/compare/v2.1.0...v2.2.0) (2025-11-17)
