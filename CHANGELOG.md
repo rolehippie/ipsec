@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.5.0](https://github.com/rolehippie/ipsec/compare/v2.4.0...v2.5.0) (2026-08-17)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-lint to v26.8.0 ([#51](https://github.com/rolehippie/ipsec/issues/51)) ([c098e2e](https://github.com/rolehippie/ipsec/commit/c098e2e232802934e60b556694f9687743c09659))
+* **minor:** update dependency pipx:molecule to v26.8.0 ([#52](https://github.com/rolehippie/ipsec/issues/52)) ([5ae9f80](https://github.com/rolehippie/ipsec/commit/5ae9f801425de7a647ed4e267db956e1ac67757b))
+* **patch:** update dependency pipx:ansible-core to v2.21.3 ([#49](https://github.com/rolehippie/ipsec/issues/49)) ([ca52877](https://github.com/rolehippie/ipsec/commit/ca52877196cd6e65edd982f481636c1f0cc0aabb))
+* **patch:** update dependency pre-commit to v4.6.2 ([#50](https://github.com/rolehippie/ipsec/issues/50)) ([8b1301b](https://github.com/rolehippie/ipsec/commit/8b1301bf054bad08e227a8d0f6b1ef5e05dd3862))
+
 ## [2.4.0](https://github.com/rolehippie/ipsec/compare/v2.3.0...v2.4.0) (2026-08-10)
 
 ### Dependencies
