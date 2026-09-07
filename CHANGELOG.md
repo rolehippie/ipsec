@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/rolehippie/ipsec/compare/v2.5.1...v2.6.0) (2026-09-07)
+
+### Features
+
+* add separate requirements for molecule run ([6395095](https://github.com/rolehippie/ipsec/commit/639509573bf9c6751b76011915871619b82302c9))
+* use new required facts as attributes ([1fcb01e](https://github.com/rolehippie/ipsec/commit/1fcb01e4267d8f6cfb7f0d7db1901b39d7adf7da))
+
 ## [2.5.1](https://github.com/rolehippie/ipsec/compare/v2.5.0...v2.5.1) (2026-08-31)
 
 ### Dependencies
